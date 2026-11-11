@@ -1,0 +1,102 @@
+body { overflow-y: scroll; margin: 15px; padding-top: 75px; font-family: "Roboto", sans-serif; }
+pre { display: inline-block; margin: 0; font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: normal; }
+pre.datetime { font-weight: bold; }
+hr { border: none; height: 0; margin-top: 20px; margin-bottom: 14px; }
+h1 { font-weight: bold; font-size: 22px; }
+/*button { padding: 6px 20px; background-color: #6B7280; color: white; font-family: "Roboto", sans-serif; font-weight: bold; border-radius: 6px; cursor: pointer; }*/
+button { border-radius: 6px; cursor: pointer; }
+button.clear { padding: 6px 20px; font-family: "Roboto", sans-serif; font-weight: bold; }
+button.auto { display: flex; align-items: center; justify-content: center; padding: 0 10px; }
+button:focus { outline: none; }
+div.datetime { display: flex; align-items: center; }
+div.line { padding: 8px 0; }
+div.trace { padding: 8px 0; display: none; }
+div.terminated { display: flex; justify-content: space-between; padding: 8px; }
+div.spacer { height: 10px; }
+div.vardump { padding: 5px 0; }
+div.heading { position: fixed; top: 0; left: 0; right: 0; padding: 10px 15px; z-index: 100000; display: flex; justify-content: space-between; align-items: center; cursor: default; }
+div.heading div.text { display: flex; align-items: center; gap: 10px; }
+div.heading div.text h1 { flex-shrink: 0; white-space: nowrap; }
+div.heading div.text svg { flex-shrink: 0; height: 25px; width: 25px; }
+div.heading div.centre { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+div.heading div.buttons { display: flex; gap: 10px; }
+div.icons { display: flex; height: 30px; padding: 4px; gap: 5px; border-radius: 19px; }
+div.icons div.icon { display: flex; padding: 0; border: 1px solid transparent; border-radius: 15px; }
+div.icons div.icon:hover { cursor: pointer; }
+div.notify { display: flex; align-items: center; color: transparent; font-size: 30px; }
+div.notify svg { height: 100%; width: auto; }
+div.trace-icon { margin-top: 0; }
+div.trace-icon svg { display: block; margin-left: 10px; height: 20px; width: 20px; cursor: pointer; }
+div.delete-icon { margin-top: -1px; }
+div.delete-icon svg { display: block; margin-left: 10px; height: 15px; width: 15px; cursor: pointer; }
+div.warning { color: #ffffff; padding: 10px; margin-bottom: 20px; border-radius: 5px; font-size: 16px; }
+div.warning div.header { margin-bottom: 10px; font-weight: bold; }
+.flip { transform: scaleX(-1); }
+.italic { font-style: italic; }
+
+/* VarDumper */
+/*pre.sf-dump { background-color: #18181b; }*/
+/*pre.sf-dump { color: #cc7832; background-color: #fafafa; !*zinc-100*! }*/
+/*pre.sf-dump span.sf-dump-str { color: #2b9713; }*/
+/*pre.sf-dump span.sf-dump-private, pre.sf-dump span.sf-dump-protected, pre.sf-dump span.sf-dump-public { color: black; }*/
+/*pre.sf-dump span.sf-dump-note { color: #136eb8; }*/
+/*pre.sf-dump span.sf-dump-key { color: #2b9713; }*/
+/*pre.sf-dump a.sf-dump-ref { color: #595858; }*/
+/*pre.sf-dump span.sf-dump-ellipsis { color: #136eb8; }*/
+/*input.sf-dump-search-input { color: black !important; background-color: white; border-color: #d4d4d8; }*/
+/*span.sf-dump-search-count { color: black; background-color: white; border-color: #d4d4d8; }*/
+/*button.sf-dump-search-input-previous, button.sf-dump-search-input-next { border-color: #d4d4d8; fill: #71717a; background-color: #f4f4f5 !important; }*/
+
+/* Light theme */
+html[data-theme="light"] {
+    body { background-color: #faf9f5; color: black; }
+    hr { border-top: 1px solid #a1a1aa; }
+    button { background-color: #d4d4d8; border: 1px solid #a1a1aa; }
+    button:hover { background-color: #a1a1aa; }
+    button.paused:hover { background-color: #d4d4d8; }
+    button.running { background-color: #a3e635; }
+    /*button.running:hover { background-color: #84cc16; }*/
+    div.terminated { color: white; background-color: #dc2626; }
+    div.heading { background-color: #fafafa; border-bottom: 1px solid #a1a1aa; }
+    div.heading div.text { color: #1d4ed8; }
+    div.heading div.centre div.on { color: red; }
+    div.heading div.icons { background-color: #e4e4e7; }
+    div.heading div.icons div.selected { background-color: #fafafa; border: 1px solid #a1a1aa; }
+    div.warning { background-color: #dc2626; }
+
+    /* VarDumper */
+    /*pre.sf-dump { color: #cc7832; background-color: #fafafa; !*zinc-100*! }*/
+    /*pre.sf-dump span.sf-dump-str { color: #2b9713; }*/
+    /*pre.sf-dump span.sf-dump-private, pre.sf-dump span.sf-dump-protected, pre.sf-dump span.sf-dump-public { color: black; }*/
+    /*pre.sf-dump span.sf-dump-note { color: #136eb8; }*/
+    /*pre.sf-dump span.sf-dump-key { color: #2b9713; }*/
+    /*pre.sf-dump a.sf-dump-ref { color: #595858; }*/
+    /*pre.sf-dump span.sf-dump-ellipsis { color: #136eb8; }*/
+    /*input.sf-dump-search-input { color: black !important; background-color: white; border-color: #d4d4d8; }*/
+    /*span.sf-dump-search-count { color: black; background-color: white; border-color: #d4d4d8; }*/
+    /*button.sf-dump-search-input-previous, button.sf-dump-search-input-next { border-color: #d4d4d8; fill: #71717a; background-color: #f4f4f5 !important; }*/
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+    body { background-color: black; color: #d4d4d8; }
+    hr { border-top: 1px solid #71717a; }
+    button { color: #d4d4d8; background-color: #27272a; border: 1px solid #a1a1aa; }
+    button:hover { background-color: #3f3f46; }
+    button.paused:hover { background-color: #27272a; }
+    button.running { background-color: #4d7c0f; }
+    /*button.running:hover { background-color: #65a30d; }*/
+    div.terminated { color: white; background-color: red; }
+    div.heading { background-color: black; border-bottom: 1px solid #71717a; }
+    div.heading div.text { color: #0284c7; }
+    div.heading div.centre div.on { color: red; }
+    div.heading div.icons { background-color: #27272a; }
+    div.heading div.icons div.selected { color: black; background-color: #fafafa; border: 1px solid #a1a1aa; }
+    div.warning { background-color: red; }
+
+    /* VarDumper */
+    /*pre.sf-dump { background-color: #18181b; !* zinc-800 *! }*/
+    /*input.sf-dump-search-input { color: white !important; background-color: black; border-color: #494950; }*/
+    /*span.sf-dump-search-count { color: white; background-color: black; border-color: #494950; }*/
+    /*button.sf-dump-search-input-previous, button.sf-dump-search-input-next { border-color: #494950; fill: #d4d4d8; background-color: #27272a !important; }*/
+}
