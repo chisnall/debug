@@ -24,28 +24,6 @@ if (!function_exists('controller')) {
     }
 }
 
-if (!function_exists('loadEnv')) {
-    function loadEnv(): array
-    {
-        $env = [];
-
-        $envFile = BASE_PATH . '/.env';
-
-        // Process .env file
-        foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $envLine) {
-            // Skip comments
-            if (strpos(trim($envLine), '#') === 0) continue;
-
-            // Get key and value and trim
-            [$key, $value] = array_map('trim', explode('=', $envLine, 2));
-
-            $env[$key] = $value;
-        }
-
-        return $env;
-    }
-}
-
 if (!function_exists('logger')) {
     function logger(): Logger {
         return Application::app()->logger();
