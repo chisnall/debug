@@ -20,18 +20,14 @@ final class Application
     private Router $router;
     private Session $session;
     private View $view;
-    private array $env;
+    private array $env = [];
     private array $config;
     private int $errors = 0;
 
     public function __construct(string $handler = 'framework')
     {
-        // Load environment variables
-        $envFile = BASE_PATH . '/.env';
-        if (!file_exists($envFile)) {
-            throw new Exception("Missing .env file: $envFile");
-        }
-        $this->env = loadEnv();
+        // Load environment
+        $this->loadEnvironment();
 
         // Sets the exception handler
         set_exception_handler([ExceptionHandler::class, $handler]);
@@ -95,10 +91,33 @@ final class Application
         return $this->view;
     }
 
-    public function initConfig()
+    private function loadEnvironment()
+    {
+        $envFile = BASE_PATH . '/.env';
+
+        if (!file_exists($envFile)) {
+            throw new Exception("Missing .env file: $envFile");
+        }
+
+        $envFile = BASE_PATH . '/.env';
+
+        // Process .env file
+        foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $envLine) {
+            // Skip comments
+            if (strpos(trim($envLine), '#') === 0) continue;
+
+            // Get key and value and trim
+            [$key, $value] = array_map('trim', explode('=', $envLine, 2));
+
+            $this->env[$key] = $value;
+        }
+    }
+
+    private function initConfig()
     {
         // Check config exists
         $configPath = BASE_PATH . '/config.php';
+
         if (!file_exists($configPath)) {
             // Using code 10 for this - and need to throw standard Exception
             throw new Exception("Config file is missing:\n$configPath", 10);
