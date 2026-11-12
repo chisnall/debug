@@ -326,4 +326,19 @@ class RequestTest extends TestCase
         $this->assertEquals($host, $result['Host']);
         $this->assertEquals($userAgent, $result['User-Agent']);
     }
+
+    public function test_getCookies()
+    {
+        $cookieName = 'test_cookie';
+        $cookieValue = 'cookie_value';
+
+        $_COOKIE[$cookieName] = $cookieValue;
+
+        $request = new Request();
+        $result = $request->getCookies();
+
+        $this->assertInternalType('array', $result);
+        $this->assertArrayHasKey($cookieName, $result);
+        $this->assertEquals($cookieValue, $result[$cookieName]);
+    }
 }
