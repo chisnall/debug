@@ -1,1 +1,32 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxwaHB1bml0IHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiDQogICAgICAgICBib290c3RyYXA9InRlc3RzL2hlbHBlcnMucGhwIg0KICAgICAgICAgcHJpbnRlckNsYXNzPSJDb2xvdXJSZXN1bHRQcmludGVyIg0KICAgICAgICAgcHJpbnRlckZpbGU9InRlc3RzL0NvbG91clJlc3VsdFByaW50ZXIucGhwIg0KICAgICAgICAgY29sb3JzPSJ0cnVlIg0KICAgICAgICAgYmVTdHJpY3RBYm91dFRlc3RzVGhhdERvTm90VGVzdEFueXRoaW5nPSJ0cnVlIg0KICAgICAgICAgc3RvcE9uRXJyb3I9InRydWUiDQogICAgICAgICBzdG9wT25GYWlsdXJlPSJ0cnVlIj4NCiAgICA8dGVzdHN1aXRlcz4NCiAgICAgICAgPHRlc3RzdWl0ZSBuYW1lPSJkZWZhdWx0Ij4NCiAgICAgICAgICAgIDxkaXJlY3Rvcnkgc3VmZml4PSJUZXN0LnBocCI+dGVzdHM8L2RpcmVjdG9yeT4NCiAgICAgICAgICAgIDxleGNsdWRlPnRlc3RzL1VkZW15PC9leGNsdWRlPg0KICAgICAgICA8L3Rlc3RzdWl0ZT4NCiAgICA8L3Rlc3RzdWl0ZXM+DQogICAgPGZpbHRlcj4NCiAgICAgICAgPHdoaXRlbGlzdD4NCiAgICAgICAgICAgIDxkaXJlY3Rvcnkgc3VmZml4PSIucGhwIj5hcHA8L2RpcmVjdG9yeT4NCiAgICAgICAgICAgIDxleGNsdWRlPg0KICAgICAgICAgICAgICAgIDxkaXJlY3Rvcnk+YXBwL1ZpZXdzPC9kaXJlY3Rvcnk+DQogICAgICAgICAgICAgICAgPGRpcmVjdG9yeT5hcHAvUm91dGVzPC9kaXJlY3Rvcnk+DQogICAgICAgICAgICA8L2V4Y2x1ZGU+DQogICAgICAgIDwvd2hpdGVsaXN0Pg0KICAgIDwvZmlsdGVyPg0KICAgIDxsb2dnaW5nPg0KICAgICAgICA8bG9nIHR5cGU9ImNvdmVyYWdlLWh0bWwiIHRhcmdldD0idGVzdHMvY292ZXJhZ2UiIGxvd1VwcGVyQm91bmQ9IjM1IiBoaWdoTG93ZXJCb3VuZD0iNzAiLz4NCiAgICA8L2xvZ2dpbmc+DQogICAgPHBocD4NCiAgICAgICAgPCEtLSBwaHAtY29kZS1jb3ZlcmFnZSA0LnggY2FsbHMgY291bnQoKSBvbiBudWxsLCB3aGljaCB3YXJucyBvbiBQSFAgNy4yKyAtLT4NCiAgICAgICAgPGluaSBuYW1lPSJlcnJvcl9yZXBvcnRpbmciIHZhbHVlPSIyNDU3MyIvPg0KICAgIDwvcGhwPg0KPC9waHB1bml0Pg0K
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="tests/helpers.php"
+         printerClass="ColourResultPrinter"
+         printerFile="tests/ColourResultPrinter.php"
+         colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         stopOnError="true"
+         stopOnFailure="true">
+    <testsuites>
+        <testsuite name="default">
+            <directory suffix="Test.php">tests</directory>
+            <exclude>tests/Udemy</exclude>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">app</directory>
+            <exclude>
+                <directory>app/Views</directory>
+                <directory>app/Routes</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="tests/coverage" lowUpperBound="35" highLowerBound="70"/>
+    </logging>
+    <php>
+        <!-- php-code-coverage 4.x calls count() on null, which warns on PHP 7.2+ -->
+        <ini name="error_reporting" value="24573"/>
+    </php>
+</phpunit>

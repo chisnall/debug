@@ -18,6 +18,7 @@ div.heading { position: fixed; top: 0; left: 0; right: 0; padding: 10px 15px; z-
 div.heading div.text { display: flex; align-items: center; gap: 10px; }
 div.heading div.text h1 { flex-shrink: 0; white-space: nowrap; }
 div.heading div.text svg { flex-shrink: 0; height: 25px; width: 25px; }
+div.heading div.text img.theme-icon { flex-shrink: 0; height: 24px; width: 24px; }
 div.heading div.centre { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 div.heading div.buttons { display: flex; gap: 10px; }
 div.icons { display: flex; height: 30px; padding: 4px; gap: 5px; border-radius: 19px; }
@@ -59,6 +60,8 @@ html[data-theme="light"] {
     div.terminated { color: white; background-color: #dc2626; }
     div.heading { background-color: #fafafa; border-bottom: 1px solid #a1a1aa; }
     div.heading div.text { color: #1d4ed8; }
+    div.heading div.text img.theme-icon-light { display: block; }
+    div.heading div.text img.theme-icon-dark { display: none; }
     div.heading div.centre div.on { color: red; }
     div.heading div.icons { background-color: #e4e4e7; }
     div.heading div.icons div.selected { background-color: #fafafa; border: 1px solid #a1a1aa; }
@@ -89,6 +92,8 @@ html[data-theme="dark"] {
     div.terminated { color: white; background-color: red; }
     div.heading { background-color: black; border-bottom: 1px solid #71717a; }
     div.heading div.text { color: #0284c7; }
+    div.heading div.text img.theme-icon-light { display: none; }
+    div.heading div.text img.theme-icon-dark { display: block; }
     div.heading div.centre div.on { color: red; }
     div.heading div.icons { background-color: #27272a; }
     div.heading div.icons div.selected { color: black; background-color: #fafafa; border: 1px solid #a1a1aa; }

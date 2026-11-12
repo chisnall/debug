@@ -8,8 +8,8 @@ $config = [
 
     // Directories
     'directories' => [
-        'entries' => '/rlg/web/log/lchisnall/debug/entries',
-        'logs' => '/rlg/web/log/lchisnall/debug/logs',
+        'entries' => getEnvironment('DIR_ENTRIES'),
+        'logs' => getEnvironment('DIR_LOGS'),
     ],
 
     // Page
@@ -64,7 +64,7 @@ $config = [
         'pollingInterval' => 1000,
         'token' => [
             'enabled' => getEnvironment('TOKEN_ENABLED'),
-            'value' => getEnvironment('TOKEN_VALUE'),
+            'value' => getEnvironment('TOKEN_SECRET'),
         ],
     ],
 

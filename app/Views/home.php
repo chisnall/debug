@@ -1,1 +1,151 @@
-PD9waHANCg0KZGVjbGFyZShzdHJpY3RfdHlwZXM9MSk7DQoNCi8qKiBAdmFyIGFycmF5ICRwYXJhbXMgKi8NCiRsb2dJZHMgPSAkcGFyYW1zWydsb2dJZHMnXTsNCiRsb2dFbnRyaWVzID0gJHBhcmFtc1snbG9nRW50cmllcyddOw0KPz4NCg0KPGRpdiBjbGFzcz0iaGVhZGluZyI+DQogICAgPGRpdiBjbGFzcz0idGV4dCI+DQogICAgICAgIDxzdmcgZmlsbD0iY3VycmVudENvbG9yIiB2aWV3Qm94PSIyIDUgMjAgMTQiPg0KICAgICAgICAgICAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNC45OTggNy43OEM2LjcyOSA2LjM0NSA5LjE5OCA1IDEyIDVjMi44MDIgMCA1LjI3IDEuMzQ1IDcuMDAyIDIuNzhhMTIuNzEzIDEyLjcxMyAwIDAgMSAyLjA5NiAyLjE4M2MuMjUzLjM0NC40NjUuNjgyLjYxOC45OTcuMTQuMjg2LjI4NC42NTguMjg0IDEuMDRzLS4xNDUuNzU0LS4yODQgMS4wNGE2LjYgNi42IDAgMCAxLS42MTguOTk3IDEyLjcxMiAxMi43MTIgMCAwIDEtMi4wOTYgMi4xODNDMTcuMjcxIDE3LjY1NSAxNC44MDIgMTkgMTIgMTljLTIuODAyIDAtNS4yNy0xLjM0NS03LjAwMi0yLjc4YTEyLjcxMiAxMi43MTIgMCAwIDEtMi4wOTYtMi4xODMgNi42IDYuNiAwIDAgMS0uNjE4LS45OTdDMi4xNDQgMTIuNzU0IDIgMTIuMzgyIDIgMTJzLjE0NS0uNzU0LjI4NC0xLjA0Yy4xNTMtLjMxNS4zNjUtLjY1My42MTgtLjk5N0ExMi43MTQgMTIuNzE0IDAgMCAxIDQuOTk4IDcuNzhaTTEyIDE1YTMgMyAwIDEgMCAwLTYgMyAzIDAgMCAwIDAgNloiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PC9wYXRoPg0KICAgICAgICA8L3N2Zz4NCiAgICAgICAgPGgxPkRlYnVnPC9oMT4NCiAgICA8L2Rpdj4NCg0KICAgIDxkaXYgY2xhc3M9ImNlbnRyZSI+DQogICAgICAgIDxkaXYgaWQ9Im5vdGlmeS0xIiBjbGFzcz0ibm90aWZ5IGZsaXAiPg0KICAgICAgICAgICAg8J+UpQ0KICAgICAgICA8L2Rpdj4NCg0KICAgICAgICA8ZGl2IGNsYXNzPSJpY29ucyI+DQogICAgICAgICAgICA8ZGl2IGlkPSJpY29uLXN5c3RlbSIgY2xhc3M9Imljb24iPg0KICAgICAgICAgICAgICAgIDxzdmcgdmlld0JveD0iMCAwIDI4IDI4IiBmaWxsPSJub25lIj4NCiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcuNSA4LjVDNy41IDcuOTQ3NzIgNy45NDc3MiA3LjUgOC41IDcuNUgxOS41QzIwLjA1MjMgNy41IDIwLjUgNy45NDc3MiAyMC41IDguNVYxNi41QzIwLjUgMTcuMDUyMyAyMC4wNTIzIDE3LjUgMTkuNSAxNy41SDguNUM3Ljk0NzcyIDE3LjUgNy41IDE3LjA1MjMgNy41IDE2LjVWOC41WiIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTcuNSA4LjVDNy41IDcuOTQ3NzIgNy45NDc3MiA3LjUgOC41IDcuNUgxOS41QzIwLjA1MjMgNy41IDIwLjUgNy45NDc3MiAyMC41IDguNVYxNC41QzIwLjUgMTUuMDUyMyAyMC4wNTIzIDE1LjUgMTkuNSAxNS41SDguNUM3Ljk0NzcyIDE1LjUgNy41IDE1LjA1MjMgNy41IDE0LjVWOC41WiIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjUgMjAuNVYxNy41SDExLjVWMjAuNU0xNi41IDIwLjVIMTEuNU0xNi41IDIwLjVIMTcuNU0xMS41IDIwLjVIMTAuNSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPg0KICAgICAgICAgICAgICAgIDwvc3ZnPg0KICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgIDxkaXYgaWQ9Imljb24tbGlnaHQiIGNsYXNzPSJpY29uIj4NCiAgICAgICAgICAgICAgICA8c3ZnIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSI+DQogICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgY3g9IjE0IiBjeT0iMTQiIHI9IjMuNSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPjwvY2lyY2xlPg0KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQgOC41VjYuNSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPg0KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTcuODg5IDEwLjExMTVMMTkuMzAzMiA4LjY5NzI3IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xOS41IDE0TDIxLjUgMTQiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjwvcGF0aD4NCiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTE3Ljg4OSAxNy44ODg1TDE5LjMwMzIgMTkuMzAyNyIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PC9wYXRoPg0KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTQgMjEuNVYxOS41IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjY5NjYzIDE5LjMwMjlMMTAuMTEwOCAxNy44ODg3IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02LjUgMTRMOC41IDE0IiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjY5NjYzIDguNjk3MTFMMTAuMTEwOCAxMC4xMTEzIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgPC9zdmc+DQogICAgICAgICAgICA8L2Rpdj4NCg0KICAgICAgICAgICAgPGRpdiBpZD0iaWNvbi1kYXJrIiBjbGFzcz0iaWNvbiI+DQogICAgICAgICAgICAgICAgPHN2ZyB2aWV3Qm94PSIwIDAgMjggMjgiIGZpbGw9Im5vbmUiPg0KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTAuNSA5Ljk5OTE0QzEwLjUgMTQuMTQxMyAxMy44NTc5IDE3LjQ5OTEgMTggMTcuNDk5MUMxOS4wMzMyIDE3LjQ5OTEgMjAuMDE3NiAxNy4yOTAyIDIwLjkxMzIgMTYuOTEyM0MxOS43NzYxIDE5LjYwNzUgMTcuMTA5IDIxLjQ5OTEgMTQgMjEuNDk5MUM5Ljg1Nzg2IDIxLjQ5OTEgNi41IDE4LjE0MTMgNi41IDEzLjk5OTFDNi41IDEwLjg5MDIgOC4zOTE2NyA4LjIyMzA0IDExLjA4NjggNy4wODU5NEMxMC43MDg5IDcuOTgxNTkgMTAuNSA4Ljk2NTk3IDEwLjUgOS45OTkxNFoiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xNi4zNTYxIDYuNTA3NTRMMTYuNSA1LjVMMTYuNjQzOSA2LjUwNzU0QzE2LjcwNjggNi45NDc1MiAxNy4wNTI1IDcuMjkzMjEgMTcuNDkyNSA3LjM1NjA3TDE4LjUgNy41TDE3LjQ5MjUgNy42NDM5M0MxNy4wNTI1IDcuNzA2NzkgMTYuNzA2OCA4LjA1MjQ4IDE2LjY0MzkgOC40OTI0NkwxNi41IDkuNUwxNi4zNTYxIDguNDkyNDZDMTYuMjkzMiA4LjA1MjQ4IDE1Ljk0NzUgNy43MDY3OSAxNS41MDc1IDcuNjQzOTNMMTQuNSA3LjVMMTUuNTA3NSA3LjM1NjA3QzE1Ljk0NzUgNy4yOTMyMSAxNi4yOTMyIDYuOTQ3NTIgMTYuMzU2MSA2LjUwNzU0WiIgZmlsbD0iY3VycmVudENvbG9yIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMC4zNTYxIDExLjUwNzVMMjAuNSAxMC41TDIwLjY0MzkgMTEuNTA3NUMyMC43MDY4IDExLjk0NzUgMjEuMDUyNSAxMi4yOTMyIDIxLjQ5MjUgMTIuMzU2MUwyMi41IDEyLjVMMjEuNDkyNSAxMi42NDM5QzIxLjA1MjUgMTIuNzA2OCAyMC43MDY4IDEzLjA1MjUgMjAuNjQzOSAxMy40OTI1TDIwLjUgMTQuNUwyMC4zNTYxIDEzLjQ5MjVDMjAuMjkzMiAxMy4wNTI1IDE5Ljk0NzUgMTIuNzA2OCAxOS41MDc1IDEyLjY0MzlMMTguNSAxMi41TDE5LjUwNzUgMTIuMzU2MUMxOS45NDc1IDEyLjI5MzIgMjAuMjkzMiAxMS45NDc1IDIwLjM1NjEgMTEuNTA3NVoiIGZpbGw9ImN1cnJlbnRDb2xvciIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9wYXRoPg0KICAgICAgICAgICAgICAgIDwvc3ZnPg0KICAgICAgICAgICAgPC9kaXY+DQogICAgICAgIDwvZGl2Pg0KDQogICAgICAgIDxkaXYgaWQ9Im5vdGlmeS0yIiBjbGFzcz0ibm90aWZ5Ij4NCiAgICAgICAgICAgIPCflKUNCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQoNCiAgICA8ZGl2IGNsYXNzPSJidXR0b25zIj4NCiAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYXV0byIgdHlwZT0iYnV0dG9uIiBpZD0iYXV0by1idXR0b24iIG5hbWU9ImF1dG8tYnV0dG9uIiB0aXRsZT0iQXV0byByZWZyZXNoIj4NCiAgICAgICAgICAgIDxzdmcgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSJub25lIiB2aWV3Qm94PSIzLjk3IDMgMTYuMDYgMTgiPg0KICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTE3LjY1MSA3LjY1YTcuMTMxIDcuMTMxIDAgMCAwLTEyLjY4IDMuMTVNMTguMDAxIDR2NGgtNG0tNy42NTIgOC4zNWE3LjEzIDcuMTMgMCAwIDAgMTIuNjgtMy4xNU02IDIwdi00aDQiPjwvcGF0aD4NCiAgICAgICAgICAgIDwvc3ZnPg0KICAgICAgICA8L2J1dHRvbj4NCg0KICAgICAgICA8YnV0dG9uIGNsYXNzPSJjbGVhciIgdHlwZT0iYnV0dG9uIiBpZD0iY2xlYXItYnV0dG9uIiBuYW1lPSJjbGVhci1idXR0b24iIHRpdGxlPSJDbGVhciBlbnRyaWVzIj5DbGVhcjwvYnV0dG9uPg0KICAgIDwvZGl2Pg0KPC9kaXY+DQoNCjxkaXYgaWQ9ImVudHJpZXMtY29udGFpbmVyIj4NCiAgICA8P3BocCBpZihjb3VudCgkbG9nRW50cmllcykgPT09IDApOiA/Pg0KICAgICAgICA8cHJlPk5vIGVudHJpZXMuPC9wcmU+DQogICAgPD9waHAgZW5kaWY7ID8+DQoNCiAgICA8P3BocCBmb3JlYWNoICgkbG9nRW50cmllcyBhcyAkbG9nRW50cnkpOiA/Pg0KICAgIDxkaXYgaWQ9ImVudHJ5LTw/PSAkbG9nRW50cnlbJ2lkJ10gPz4iIGNsYXNzPSJlbnRyeSI+DQogICAgICAgIDw/cGhwIGlmKCRsb2dFbnRyeVsndGVybWluYXRlZCddKTogPz4NCiAgICAgICAgPGRpdiBjbGFzcz0idGVybWluYXRlZCI+DQogICAgICAgICAgICA8ZGl2IGNsYXNzPSJkYXRldGltZSI+DQogICAgICAgICAgICAgICAgPHByZSBjbGFzcz0iZGF0ZXRpbWUiPjw/PSAkbG9nRW50cnlbJ2RhdGV0aW1lJ10gPz48L3ByZT4NCg0KICAgICAgICAgICAgICAgIDwhLS0gVGhlc2UgaWNvbnMgYXJlIGZyb20gRmxvd2JpdGU6IGh0dHBzOi8vZmxvd2JpdGUuY29tL2ljb25zLyAtLT4NCg0KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InRyYWNlLWljb24iIGRhdGEtaWQ9Ijw/PSAkbG9nRW50cnlbJ2lkJ10gPz4iPg0KICAgICAgICAgICAgICAgICAgICA8c3ZnIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjQgMiAxNiAyMCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik05IDhoMTBNOSAxMmgxME05IDE2aDEwTTQuOTkgOEg1bS0uMDIgNGguMDFtMCA0SDUiLz4NCiAgICAgICAgICAgICAgICAgICAgPC9zdmc+DQogICAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJkZWxldGUtaWNvbiIgZGF0YS1pZD0iPD89ICRsb2dFbnRyeVsnaWQnXSA/PiI+DQogICAgICAgICAgICAgICAgICAgIDxzdmcgZmlsbD0ibm9uZSIgdmlld0JveD0iNCAyIDE2IDIwIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUgN2gxNG0tOSAzdjhtNC04djhNMTAgM2g0YTEgMSAwIDAgMSAxIDF2M0g5VjRhMSAxIDAgMCAxIDEtMVpNNiA3aDEydjEzYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjdaIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDwvc3ZnPg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgIDxwcmU+dGVybWluYXRlZDwvcHJlPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPD9waHAgZWxzZTogPz4NCiAgICAgICAgPGRpdiBjbGFzcz0ibGluZSI+DQogICAgICAgICAgICA8ZGl2IGNsYXNzPSJkYXRldGltZSI+DQogICAgICAgICAgICAgICAgPHByZSBjbGFzcz0iZGF0ZXRpbWUiPjw/PSAkbG9nRW50cnlbJ2RhdGV0aW1lJ10gPz48L3ByZT4NCg0KICAgICAgICAgICAgICAgIDwhLS0gVGhlc2UgaWNvbnMgYXJlIGZyb20gRmxvd2JpdGU6IGh0dHBzOi8vZmxvd2JpdGUuY29tL2ljb25zLyAtLT4NCg0KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InRyYWNlLWljb24iIGRhdGEtaWQ9Ijw/PSAkbG9nRW50cnlbJ2lkJ10gPz4iPg0KICAgICAgICAgICAgICAgICAgICA8c3ZnIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjQgMiAxNiAyMCI+DQogICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik05IDhoMTBNOSAxMmgxME05IDE2aDEwTTQuOTkgOEg1bS0uMDIgNGguMDFtMCA0SDUiLz4NCiAgICAgICAgICAgICAgICAgICAgPC9zdmc+DQogICAgICAgICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJkZWxldGUtaWNvbiIgZGF0YS1pZD0iPD89ICRsb2dFbnRyeVsnaWQnXSA/PiI+DQogICAgICAgICAgICAgICAgICAgIDxzdmcgZmlsbD0ibm9uZSIgdmlld0JveD0iNCAyIDE2IDIwIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUgN2gxNG0tOSAzdjhtNC04djhNMTAgM2g0YTEgMSAwIDAgMSAxIDF2M0g5VjRhMSAxIDAgMCAxIDEtMVpNNiA3aDEydjEzYTEgMSAwIDAgMS0xIDFIN2ExIDEgMCAwIDEtMS0xVjdaIj48L3BhdGg+DQogICAgICAgICAgICAgICAgICAgIDwvc3ZnPg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgPC9kaXY+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8P3BocCBlbmRpZjsgPz4NCg0KICAgICAgICA8ZGl2IGNsYXNzPSJsaW5lIj4NCiAgICAgICAgICAgIDxwcmU+PD89ICRsb2dFbnRyeVsnZmlsZSddIC4gJzonIC4gJGxvZ0VudHJ5WydsaW5lJ10gPz48L3ByZT4NCiAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgPD9waHAgaWYoJGxvZ0VudHJ5Wydjb21tZW50J10pOiA/Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJsaW5lIj4NCiAgICAgICAgICAgIDxwcmUgY2xhc3M9Iml0YWxpYyI+PD89ICRsb2dFbnRyeVsnY29tbWVudCddID8+PC9wcmU+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8P3BocCBlbmRpZjsgPz4NCg0KICAgICAgICA8ZGl2IGlkPSJ0cmFjZS08Pz0gJGxvZ0VudHJ5WydpZCddID8+IiBjbGFzcz0idHJhY2UiPg0KICAgICAgICAgICAgPHByZT48Pz0gJGxvZ0VudHJ5Wyd0cmFjZSddID8+PC9wcmU+DQogICAgICAgIDwvZGl2Pg0KDQogICAgICAgIDxkaXYgY2xhc3M9InZhcmR1bXAiPg0KICAgICAgICAgICAgPD9waHAgZWNobyBiYXNlNjRfZGVjb2RlKCRsb2dFbnRyeVsnZW50cnknXSk7ID8+DQogICAgICAgIDwvZGl2Pg0KDQogICAgICAgIDxocj4NCiAgICA8L2Rpdj4NCiAgICA8P3BocCBlbmRmb3JlYWNoOyA/Pg0KPC9kaXY+DQoNCjxmb3JtPg0KICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJsb2dJZHMiIG5hbWU9ImxvZ0lkcyIgdmFsdWU9Ijw/cGhwIGVjaG8gaW1wbG9kZSgnLCcsICRsb2dJZHMpID8+Ij4NCiAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iZGVidWdUb2tlbiIgbmFtZT0iZGVidWdUb2tlbiIgdmFsdWU9Ijw/PSBnZXRDb25maWcoJ2RlYnVnL3Rva2VuL3ZhbHVlJykgPz4iPg0KICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJkZWJ1Z1BvbGxpbmdJbnRlcnZhbCIgbmFtZT0iZGVidWdQb2xsaW5nSW50ZXJ2YWwiIHZhbHVlPSI8Pz0gZ2V0Q29uZmlnKCdkZWJ1Zy9wb2xsaW5nSW50ZXJ2YWwnKSA/PiI+DQo8L2Zvcm0+DQo=
+<?php
+
+declare(strict_types=1);
+
+/** @var array $params */
+$logIds = $params['logIds'];
+$logEntries = $params['logEntries'];
+?>
+
+<div class="heading">
+    <div class="text">
+<!--        <svg fill="currentColor" viewBox="2 5 20 14">-->
+<!--            <path fill-rule="evenodd" d="M4.998 7.78C6.729 6.345 9.198 5 12 5c2.802 0 5.27 1.345 7.002 2.78a12.713 12.713 0 0 1 2.096 2.183c.253.344.465.682.618.997.14.286.284.658.284 1.04s-.145.754-.284 1.04a6.6 6.6 0 0 1-.618.997 12.712 12.712 0 0 1-2.096 2.183C17.271 17.655 14.802 19 12 19c-2.802 0-5.27-1.345-7.002-2.78a12.712 12.712 0 0 1-2.096-2.183 6.6 6.6 0 0 1-.618-.997C2.144 12.754 2 12.382 2 12s.145-.754.284-1.04c.153-.315.365-.653.618-.997A12.714 12.714 0 0 1 4.998 7.78ZM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd"></path>-->
+<!--        </svg>-->
+        <img class="theme-icon theme-icon-light" src="/images/icon-light.png" alt="Debug icon" width="24" height="24">
+        <img class="theme-icon theme-icon-dark" src="/images/icon-dark.png" alt="Debug icon" width="24" height="24" aria-hidden="true">
+        <h1>Debug</h1>
+    </div>
+
+    <div class="centre">
+        <div id="notify-1" class="notify flip">
+            🔥
+        </div>
+
+        <div class="icons">
+            <div id="icon-system" class="icon">
+                <svg viewBox="0 0 28 28" fill="none">
+                    <path d="M7.5 8.5C7.5 7.94772 7.94772 7.5 8.5 7.5H19.5C20.0523 7.5 20.5 7.94772 20.5 8.5V16.5C20.5 17.0523 20.0523 17.5 19.5 17.5H8.5C7.94772 17.5 7.5 17.0523 7.5 16.5V8.5Z" stroke="currentColor"></path>
+                    <path d="M7.5 8.5C7.5 7.94772 7.94772 7.5 8.5 7.5H19.5C20.0523 7.5 20.5 7.94772 20.5 8.5V14.5C20.5 15.0523 20.0523 15.5 19.5 15.5H8.5C7.94772 15.5 7.5 15.0523 7.5 14.5V8.5Z" stroke="currentColor"></path>
+                    <path d="M16.5 20.5V17.5H11.5V20.5M16.5 20.5H11.5M16.5 20.5H17.5M11.5 20.5H10.5" stroke="currentColor" stroke-linecap="round"></path>
+                </svg>
+            </div>
+
+            <div id="icon-light" class="icon">
+                <svg viewBox="0 0 28 28" fill="none">
+                    <circle cx="14" cy="14" r="3.5" stroke="currentColor"></circle>
+                    <path d="M14 8.5V6.5" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M17.889 10.1115L19.3032 8.69727" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M19.5 14L21.5 14" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M17.889 17.8885L19.3032 19.3027" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M14 21.5V19.5" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M8.69663 19.3029L10.1108 17.8887" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M6.5 14L8.5 14" stroke="currentColor" stroke-linecap="round"></path>
+                    <path d="M8.69663 8.69711L10.1108 10.1113" stroke="currentColor" stroke-linecap="round"></path>
+                </svg>
+            </div>
+
+            <div id="icon-dark" class="icon">
+                <svg viewBox="0 0 28 28" fill="none">
+                    <path d="M10.5 9.99914C10.5 14.1413 13.8579 17.4991 18 17.4991C19.0332 17.4991 20.0176 17.2902 20.9132 16.9123C19.7761 19.6075 17.109 21.4991 14 21.4991C9.85786 21.4991 6.5 18.1413 6.5 13.9991C6.5 10.8902 8.39167 8.22304 11.0868 7.08594C10.7089 7.98159 10.5 8.96597 10.5 9.99914Z" stroke="currentColor" stroke-linejoin="round"></path>
+                    <path d="M16.3561 6.50754L16.5 5.5L16.6439 6.50754C16.7068 6.94752 17.0525 7.29321 17.4925 7.35607L18.5 7.5L17.4925 7.64393C17.0525 7.70679 16.7068 8.05248 16.6439 8.49246L16.5 9.5L16.3561 8.49246C16.2932 8.05248 15.9475 7.70679 15.5075 7.64393L14.5 7.5L15.5075 7.35607C15.9475 7.29321 16.2932 6.94752 16.3561 6.50754Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M20.3561 11.5075L20.5 10.5L20.6439 11.5075C20.7068 11.9475 21.0525 12.2932 21.4925 12.3561L22.5 12.5L21.4925 12.6439C21.0525 12.7068 20.7068 13.0525 20.6439 13.4925L20.5 14.5L20.3561 13.4925C20.2932 13.0525 19.9475 12.7068 19.5075 12.6439L18.5 12.5L19.5075 12.3561C19.9475 12.2932 20.2932 11.9475 20.3561 11.5075Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div id="notify-2" class="notify">
+            🔥
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="auto" type="button" id="auto-button" name="auto-button" title="Auto refresh">
+            <svg width="14" height="14" fill="none" viewBox="3.97 3 16.06 18">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.651 7.65a7.131 7.131 0 0 0-12.68 3.15M18.001 4v4h-4m-7.652 8.35a7.13 7.13 0 0 0 12.68-3.15M6 20v-4h4"></path>
+            </svg>
+        </button>
+
+        <button class="clear" type="button" id="clear-button" name="clear-button" title="Clear entries">Clear</button>
+    </div>
+</div>
+
+<div id="entries-container">
+    <?php if(count($logEntries) === 0): ?>
+        <pre>No entries.</pre>
+    <?php endif; ?>
+
+    <?php foreach ($logEntries as $logEntry): ?>
+        <div id="entry-<?= $logEntry['id'] ?>" class="entry">
+            <?php if($logEntry['terminated']): ?>
+                <div class="terminated">
+                    <div class="datetime">
+                        <pre class="datetime"><?= $logEntry['datetime'] ?></pre>
+
+                        <!-- These icons are from Flowbite: https://flowbite.com/icons/ -->
+
+                        <div class="trace-icon" data-id="<?= $logEntry['id'] ?>">
+                            <svg fill="none" viewBox="4 2 16 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
+                            </svg>
+                        </div>
+
+                        <div class="delete-icon" data-id="<?= $logEntry['id'] ?>">
+                            <svg fill="none" viewBox="4 2 16 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <pre>terminated</pre>
+                </div>
+            <?php else: ?>
+                <div class="line">
+                    <div class="datetime">
+                        <pre class="datetime"><?= $logEntry['datetime'] ?></pre>
+
+                        <!-- These icons are from Flowbite: https://flowbite.com/icons/ -->
+
+                        <div class="trace-icon" data-id="<?= $logEntry['id'] ?>">
+                            <svg fill="none" viewBox="4 2 16 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/>
+                            </svg>
+                        </div>
+
+                        <div class="delete-icon" data-id="<?= $logEntry['id'] ?>">
+                            <svg fill="none" viewBox="4 2 16 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <div class="line">
+                <pre><?= $logEntry['file'] . ':' . $logEntry['line'] ?></pre>
+            </div>
+
+            <?php if($logEntry['comment']): ?>
+                <div class="line">
+                    <pre class="italic"><?= $logEntry['comment'] ?></pre>
+                </div>
+            <?php endif; ?>
+
+            <div id="trace-<?= $logEntry['id'] ?>" class="trace">
+                <pre><?= $logEntry['trace'] ?></pre>
+            </div>
+
+            <div class="vardump">
+                <?php echo base64_decode($logEntry['entry']); ?>
+            </div>
+
+            <hr>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<form>
+    <input type="hidden" id="logIds" name="logIds" value="<?php echo implode(',', $logIds) ?>">
+    <input type="hidden" id="debugToken" name="debugToken" value="<?= getConfig('debug/token/value') ?>">
+    <input type="hidden" id="debugPollingInterval" name="debugPollingInterval" value="<?= getConfig('debug/pollingInterval') ?>">
+</form>
