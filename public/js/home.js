@@ -22,7 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     html += '<div class="line">';
                 }
 
-                html += `<div class="datetime"><pre class="datetime">${entry.datetime}</pre><div class="trace-icon" data-id="${entry.id}">${traceIcon}</div><div class="delete-icon" data-id="${entry.id}">${deleteIcon}</div>`;
+                html += `<div class="datetime"><pre class="datetime">${entry.datetime}</pre>`;
+
+                if (entry.xdebug) {
+                    html += `<div class="disabled-icon" data-id="${entry.id}">`;
+                } else {
+                    html += `<div class="trace-icon" data-id="${entry.id}">`;
+                }
+
+                html += `${traceIcon}</div><div class="delete-icon" data-id="${entry.id}">${deleteIcon}</div>`;
 
                 if (entry.terminated) {
                     html += '</div><pre>terminated</pre></div>';
@@ -30,11 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     html += '</div></div>';
                 }
 
-                html += `<div class="line"><pre>${entry.file}:${entry.line}</pre></div>`;
-                //html += `<div class="line"><pre>${entry.line}</pre></div>`;
-                if (entry.comment) html += `<div class="line"><pre class="italic">${entry.comment}</pre></div>`;
-                html += `<div id="trace-${entry.id}" class="trace"><pre>` + entry.trace + '</pre></div>';
-                html += '<div class="vardump">' + atob(entry.entry) + '</div>';
+                if (entry.xdebug) {
+                    const xdebugBasename = entry.xdebug.split('/').pop();
+                    html += `<div class="line"><pre>Xdebug trace</pre></div>`;
+                    html += `<div class="line"><pre><a class="xdebug" href="/xdebug?id=${entry.id}" target="_blank">${xdebugBasename}</a></pre></div>`;
+                } else {
+                    html += `<div class="line"><pre>${entry.file}:${entry.line}</pre></div>`;
+                    if (entry.comment) html += `<div class="line"><pre class="italic">${entry.comment}</pre></div>`;
+                    html += `<div id="trace-${entry.id}" class="trace"><pre>` + entry.trace + '</pre></div>';
+                    html += '<div class="vardump">' + atob(entry.entry) + '</div>';
+                }
+
                 html += `<hr>`;
                 html += `</div>`;
             });
@@ -193,11 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
         } else if (e.target.closest('div.delete-icon')) {
             e.preventDefault();
+        } else if (e.target.closest('div.disabled-icon')) {
+            e.preventDefault();
         }
     });
 
     document.addEventListener('click', function(e) {
         const el = e.target.closest('div.delete-icon');
+
         if (el) {
             const entryId = el.dataset.id;
 
@@ -233,6 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', function(e) {
         const el = e.target.closest('div.trace-icon');
+
         if (el) {
             const entryId = el.dataset.id;
 
