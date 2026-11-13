@@ -14,7 +14,9 @@ div.trace { padding: 8px 0; display: none; }
 div.terminated { display: flex; justify-content: space-between; padding: 8px; }
 div.spacer { height: 10px; }
 div.vardump { padding: 5px 0; }
-div.heading { position: fixed; top: 0; left: 0; right: 0; padding: 10px 15px; z-index: 100000; display: flex; justify-content: space-between; align-items: center; cursor: default; }
+div.heading { position: fixed; top: 0; left: 0; right: 0; padding: 10px 15px; z-index: 100000; }
+div.heading div.upper { display: flex; justify-content: space-between; align-items: center; cursor: default; }
+div.xdebug-meta { display: flex; flex-direction: column; font-weight: bold; gap: 10px; padding-bottom: 20px; }
 div.heading div.text { display: flex; align-items: center; gap: 10px; }
 div.heading div.text h1 { flex-shrink: 0; white-space: nowrap; }
 div.heading div.text svg { flex-shrink: 0; height: 25px; width: 25px; }
@@ -30,8 +32,11 @@ div.trace-icon { margin-top: 0; }
 div.trace-icon svg { display: block; margin-left: 10px; height: 20px; width: 20px; cursor: pointer; }
 div.delete-icon { margin-top: -1px; }
 div.delete-icon svg { display: block; margin-left: 10px; height: 15px; width: 15px; cursor: pointer; }
+div.disabled-icon { margin-top: 0; }
+div.disabled-icon svg { display: block; margin-left: 10px; height: 20px; width: 20px; cursor: default; }
 div.warning { color: #ffffff; padding: 10px; margin-bottom: 20px; border-radius: 5px; font-size: 16px; }
 div.warning div.header { margin-bottom: 10px; font-weight: bold; }
+a.xdebug { text-decoration: none; }
 .flip { transform: scaleX(-1); }
 .italic { font-style: italic; }
 
@@ -66,6 +71,8 @@ html[data-theme="light"] {
     div.heading div.icons { background-color: #e4e4e7; }
     div.heading div.icons div.selected { background-color: #fafafa; border: 1px solid #a1a1aa; }
     div.warning { background-color: #dc2626; }
+    div.disabled-icon { color: #9ca3af; }
+    a.xdebug { color: #2563eb; }
 
     /* VarDumper */
     /*pre.sf-dump { color: #cc7832; background-color: #fafafa; !*zinc-100*! }*/
@@ -98,6 +105,8 @@ html[data-theme="dark"] {
     div.heading div.icons { background-color: #27272a; }
     div.heading div.icons div.selected { color: black; background-color: #fafafa; border: 1px solid #a1a1aa; }
     div.warning { background-color: red; }
+    div.disabled-icon { color: #4b5563; }
+    a.xdebug { color: #60a5fa; }
 
     /* VarDumper */
     /*pre.sf-dump { background-color: #18181b; !* zinc-800 *! }*/
