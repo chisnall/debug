@@ -18,14 +18,10 @@ function exceptionHandler(Throwable $exception) {
 set_exception_handler('exceptionHandler');
 
 define('APP_START', microtime(true));
+define('APP_DEBUG', false);
 define('BASE_PATH', dirname(__DIR__));
 
 require_once BASE_PATH . '/vendor/autoload.php';
 
-#------------------------------------------------------------------------------------------------
-
 // Boot application
 (new Application())->run();
-
-// Calculate application time
-//appTime();
