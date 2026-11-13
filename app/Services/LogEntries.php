@@ -10,14 +10,14 @@ class LogEntries
         $logEntries = [];
 
         // Get entries path
-        $entriesPath = getConfig('directories/entries');
+        $entriesDirectory = getConfig('directories/entries');
 
         // Get files
-        $files = array_diff(scandir($entriesPath), ['.', '..']);
+        $files = array_diff(scandir($entriesDirectory), ['.', '..']);
 
         foreach ($files as $file) {
             // Read file contents
-            $contents = file_get_contents("$entriesPath/$file");
+            $contents = file_get_contents("$entriesDirectory/$file");
 
             // Unserialize file contents
             $entry = unserialize($contents);
@@ -30,6 +30,27 @@ class LogEntries
         }
 
         return $logEntries;
+    }
+
+    public static function entryById($id)
+    {
+        // Get entries path
+        $entriesDirectory = getConfig('directories/entries');
+
+        // Set entry file path
+        $entryPath = "$entriesDirectory/$id.log";
+
+        if (!file_exists($entryPath)) {
+            return null;
+        }
+
+        // Read file contents
+        $contents = file_get_contents($entryPath);
+
+        // Unserialize file contents
+        $entry = unserialize($contents);
+
+        return $entry;
     }
 
     public static function ids(array $entries)
