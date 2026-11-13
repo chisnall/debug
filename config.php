@@ -10,6 +10,7 @@ $config = [
     'directories' => [
         'entries' => getEnvironment('DIR_ENTRIES'),
         'logs' => getEnvironment('DIR_LOGS'),
+        'xdebug' => getEnvironment('DIR_XDEBUG'),
     ],
 
     // Page
