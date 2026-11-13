@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Controllers\HomeController;
 use App\Controllers\EntriesController;
 use App\Controllers\SiteController;
+use App\Controllers\XdebugController;
 
 // Home controller
 router()->get('/', [HomeController::class, 'home']);
@@ -15,6 +16,9 @@ router()->post('/api/clear', [EntriesController::class, 'clearLog']);
 router()->post('/api/delete', [EntriesController::class, 'deleteEntry']);
 router()->post('/api/entries', [EntriesController::class, 'logEntries']);
 router()->get('/api/ids', [EntriesController::class, 'logIds']);
+
+// Xdebug trace controller
+router()->get('/xdebug', [XdebugController::class, 'view']);
 
 // Test page
 router()->get('/test', [SiteController::class, 'test']);
