@@ -1,1 +1,26 @@
-PD9waHANCg0KZGVjbGFyZShzdHJpY3RfdHlwZXM9MSk7DQo/Pg0KPCFkb2N0eXBlIGh0bWw+DQo8aHRtbCBpZD0iaHRtbCIgbGFuZz0iZW4iPg0KPGhlYWQ+DQogICAgPG1ldGEgY2hhcnNldD0iVVRGLTgiPg0KICAgIDxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbSI+DQogICAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tIiBjcm9zc29yaWdpbj4NCiAgICA8bGluayBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PUpldEJyYWlucytNb25vOml0YWwsd2dodEAwLDEwMC4uODAwOzEsMTAwLi44MDAmZmFtaWx5PVJvYm90bzppdGFsLHdnaHRAMCwxMDAuLjkwMDsxLDEwMC4uOTAwJmRpc3BsYXk9c3dhcCIgcmVsPSJzdHlsZXNoZWV0Ij4NCiAgICA8IS0tICAgIFJvYm90byBNb25vIGZvbnQgaW5zdGVhZCBvZiBKZXRCcmFpbnMgTW9uby0tPg0KICAgIDwhLS0gICAgPGxpbmsgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1Sb2JvdG8rTW9ubzppdGFsLHdnaHRAMCwxMDAuLjcwMDsxLDEwMC4uNzAwJmZhbWlseT1Sb2JvdG86aXRhbCx3Z2h0QDAsMTAwLi45MDA7MSwxMDAuLjkwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+LS0+DQogICAgPGxpbmsgcmVsPSJpY29uIiBocmVmPSIvaW1hZ2VzL2ljb24tbGlnaHQucG5nIiBzaXplcz0iMTkyeDE5MiI+DQogICAgPGxpbmsgaHJlZj0iL2Nzcy9zdHlsZS5jc3MiIHJlbD0ic3R5bGVzaGVldCI+DQogICAgPHNjcmlwdCBzcmM9Ii9qcy94ZGVidWcuanMiPjwvc2NyaXB0Pg0KICAgIDx0aXRsZT57e3RpdGxlfX08L3RpdGxlPg0KPC9oZWFkPg0KPGJvZHkgY2xhc3M9ImJvZHktdGV4dCI+DQoNCjxzZWN0aW9uIGlkPSJjb250ZW50Ij4NCiAgICB7e2NvbnRlbnR9fQ0KPC9zZWN0aW9uPg0KDQo8L2JvZHk+DQo8L2h0bWw+DQo=
+<?php
+
+declare(strict_types=1);
+?>
+<!doctype html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--    Roboto Mono font instead of JetBrains Mono-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
+    <link rel="icon" href="/images/icon-light.png" sizes="192x192">
+    <link href="/css/style.css" rel="stylesheet">
+    <script src="/js/xdebug.js"></script>
+    <title>{{title}}</title>
+</head>
+<body class="body-text">
+
+<section id="content">
+    {{content}}
+</section>
+
+</body>
+</html>

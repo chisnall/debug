@@ -1,1 +1,33 @@
-PD9waHANCg0KZGVjbGFyZShzdHJpY3RfdHlwZXM9MSk7DQoNCi8qKiBAdmFyIGFycmF5ICRwYXJhbXMgKi8NCiR4ZGVidWcgPSAkcGFyYW1zWyd4ZGVidWcnXTsNCiRtZXRhID0gJHBhcmFtc1snbWV0YSddOw0KJHRyYWNlID0gJHBhcmFtc1sndHJhY2UnXTsNCj8+DQoNCjxkaXYgY2xhc3M9ImhlYWRpbmciPg0KICAgIDxkaXYgY2xhc3M9InVwcGVyIj4NCiAgICAgICAgPGRpdiBjbGFzcz0idGV4dCI+DQogICAgICAgICAgICA8aW1nIGNsYXNzPSJ0aGVtZS1pY29uIHRoZW1lLWljb24tbGlnaHQiIHNyYz0iL2ltYWdlcy9pY29uLWxpZ2h0LnBuZyIgYWx0PSJEZWJ1ZyBpY29uIj4NCiAgICAgICAgICAgIDxpbWcgY2xhc3M9InRoZW1lLWljb24gdGhlbWUtaWNvbi1kYXJrIiBzcmM9Ii9pbWFnZXMvaWNvbi1kYXJrLnBuZyIgYWx0PSJEZWJ1ZyBpY29uIiBhcmlhLWhpZGRlbj0idHJ1ZSI+DQogICAgICAgICAgICA8aDE+WGRlYnVnIFRyYWNlPC9oMT4NCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQo8L2Rpdj4NCg0KPGRpdiBpZD0ieGRlYnVnLWNvbnRhaW5lciI+DQogICAgPGRpdiBjbGFzcz0ieGRlYnVnLW1ldGEiPg0KICAgICAgICA8cHJlPjw/PSAkbWV0YVsnbWV0aG9kJ10gPz48L3ByZT4NCiAgICAgICAgPHByZT48Pz0gcGFyc2VfdXJsKCRtZXRhWydwYXRoJ10sIFBIUF9VUkxfUEFUSCkgPz48L3ByZT4NCiAgICAgICAgPD9waHAgaWYoJG1ldGFbJ2dldCddKTogPz4NCiAgICAgICAgICAgIDxwcmU+PD89IGpzb25fZW5jb2RlKCRtZXRhWydnZXQnXSwgSlNPTl9QUkVUVFlfUFJJTlQpID8+PC9wcmU+DQogICAgICAgIDw/cGhwIGVsc2VpZigkbWV0YVsncG9zdCddKTogPz4NCiAgICAgICAgICAgIDxwcmU+PD89IGpzb25fZW5jb2RlKCRtZXRhWydwb3N0J10sIEpTT05fUFJFVFRZX1BSSU5UKSA/PjwvcHJlPg0KICAgICAgICA8P3BocCBlbmRpZjsgPz4NCiAgICA8L2Rpdj4NCg0KICAgIDxwcmU+PD89ICR0cmFjZSA/PjwvcHJlPg0KPC9kaXY+DQo=
+<?php
+
+declare(strict_types=1);
+
+/** @var array $params */
+$xdebug = $params['xdebug'];
+$meta = $params['meta'];
+$trace = $params['trace'];
+?>
+
+<div class="heading">
+    <div class="upper">
+        <div class="text">
+            <img class="theme-icon theme-icon-light" src="/images/icon-light.png" alt="Debug icon">
+            <img class="theme-icon theme-icon-dark" src="/images/icon-dark.png" alt="Debug icon" aria-hidden="true">
+            <h1>Xdebug Trace</h1>
+        </div>
+    </div>
+</div>
+
+<div id="xdebug-container">
+    <div class="xdebug-meta">
+        <pre><?= $meta['method'] ?></pre>
+        <pre><?= parse_url($meta['path'], PHP_URL_PATH) ?></pre>
+        <?php if($meta['get']): ?>
+            <pre><?= json_encode($meta['get'], JSON_PRETTY_PRINT) ?></pre>
+        <?php elseif($meta['post']): ?>
+            <pre><?= json_encode($meta['post'], JSON_PRETTY_PRINT) ?></pre>
+        <?php endif; ?>
+    </div>
+
+    <pre><?= $trace ?></pre>
+</div>

@@ -1,3 +1,5 @@
 .idea/
+tests/coverage/
 tests/Udemy/
+public/tests
 .env
