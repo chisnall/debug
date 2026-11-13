@@ -35,8 +35,10 @@ class EntriesController extends Controller
     public function clearLog(): string
     {
         $entriesPath = getConfig('directories/entries');
+        $xdebugPath = getConfig('directories/xdebug');
 
         deleteAllFiles($entriesPath);
+        deleteAllFiles($xdebugPath);
 
         return json_encode([
             'status' => 200,
@@ -49,7 +51,18 @@ class EntriesController extends Controller
 
         $entriesPath = getConfig('directories/entries');
 
-        deleteFile("$entriesPath/$entryId.log");
+        $entryFile = "$entriesPath/$entryId.log";
+
+        $entry = LogEntries::entryById($entryId);
+
+        $xdebug = $entry['xdebug'] ?? null;
+
+        deleteFile($entryFile);
+
+        if ($xdebug) {
+            deleteFile($xdebug);
+            deleteFile("$xdebug.meta");
+        }
 
         return json_encode([
             'status' => 200,
