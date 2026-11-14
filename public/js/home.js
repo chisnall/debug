@@ -77,19 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Apply theme
-    function applyTheme(theme) {
-        // Check for system theme
-        if (theme === "system") {
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            if (prefersDark) theme = 'dark';
-            else theme = 'light';
-        }
-
-        if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
-        else if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
-    }
-
     // Run scripts in VarDumper output
     function runScriptsFrom(element) {
         element.querySelectorAll('script').forEach(script => {
@@ -134,54 +121,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Style theme buttons
-    function styleThemeButtons(button) {
-        systemThemeButton.classList.remove("selected");
-        lightThemeButton.classList.remove("selected");
-        darkThemeButton.classList.remove("selected");
-        document.getElementById(`icon-${button}`).classList.add("selected");
-    }
-
     const debugToken = document.getElementById('debugToken').value;
     const debugPollingInterval = (+document.getElementById('debugPollingInterval').value) || 1000;
 
     const entriesContainer = document.getElementById("entries-container");
     const notify1 = document.getElementById("notify-1");
     const notify2 = document.getElementById("notify-2");
-    const systemThemeButton = document.getElementById("icon-system");
-    const lightThemeButton = document.getElementById("icon-light");
-    const darkThemeButton = document.getElementById("icon-dark");
 
     const autoBtn = document.getElementById("auto-button");
     const clearBtn = document.getElementById("clear-button");
 
     let currentState = localStorage.getItem("currentState") ?? 'running';
 
-    let currentTheme = localStorage.getItem("currentTheme") ?? 'system';
-
     let previousLogIdsValue = document.getElementById('logIds').value === '' ? null : document.getElementById('logIds').value;
     let previousLogIds = previousLogIdsValue === null ? [] : previousLogIdsValue.split(",").map(Number);
 
     const deleteIcon = '<svg fill="none" viewBox="4 2 16 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"></path></svg>';
     const traceIcon = '<svg fill="none" viewBox="4 2 16 20"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M9 8h10M9 12h10M9 16h10M4.99 8H5m-.02 4h.01m0 4H5"/></svg>';
-
-    systemThemeButton.addEventListener("click", () => {
-        localStorage.setItem("currentTheme", "system");
-        styleThemeButtons('system');
-        applyTheme('system');
-    });
-
-    lightThemeButton.addEventListener("click", () => {
-        localStorage.setItem("currentTheme", "light");
-        styleThemeButtons('light');
-        applyTheme('light');
-    });
-
-    darkThemeButton.addEventListener("click", () => {
-        localStorage.setItem("currentTheme", "dark");
-        styleThemeButtons('dark');
-        applyTheme('dark');
-    });
 
     autoBtn.addEventListener("click", () => {
         currentState = currentState === 'running' ? 'paused' : 'running';
@@ -320,8 +276,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, debugPollingInterval);
 
-    // Style themed buttons and apply theme
-    styleThemeButtons(currentTheme);
     styleAutoButton(currentState);
-    applyTheme(currentTheme);
 });

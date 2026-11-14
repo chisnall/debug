@@ -14,6 +14,7 @@ declare(strict_types=1);
     <link rel="icon" href="/images/icon-light.png" sizes="192x192">
     <link href="/css/style.css" rel="stylesheet">
     <script src="/js/home.js"></script>
+    <script src="/js/theme.js"></script>
     <title>{{title}}</title>
 </head>
 <body class="body-text">
