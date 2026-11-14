@@ -5,7 +5,7 @@ declare(strict_types=1);
 <!doctype html>
 <html id="html" lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/images/icon-light.png" sizes="192x192">
     <title>{{title}}</title>

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 /** @var array $params */
 $xdebug = $params['xdebug'];
-$meta = $params['meta'];
 $trace = $params['trace'];
+$request = $params['request'];
 ?>
 
 <div class="heading">
@@ -19,15 +19,15 @@ $trace = $params['trace'];
 </div>
 
 <div id="xdebug-container">
-    <div class="xdebug-meta">
-        <pre><?= $meta['method'] ?></pre>
-        <pre><?= parse_url($meta['path'], PHP_URL_PATH) ?></pre>
-        <?php if($meta['get']): ?>
-            <pre><?= json_encode($meta['get'], JSON_PRETTY_PRINT) ?></pre>
-        <?php elseif($meta['post']): ?>
-            <pre><?= json_encode($meta['post'], JSON_PRETTY_PRINT) ?></pre>
+    <div class="xdebug-request">
+        <pre><?= $request['method'] ?></pre>
+        <pre><?= parse_url($request['path'], PHP_URL_PATH) ?></pre>
+        <?php if($request['get']): ?>
+            <pre><?= json_encode($request['get'], JSON_PRETTY_PRINT) ?></pre>
+        <?php elseif($request['post']): ?>
+            <pre><?= json_encode($request['post'], JSON_PRETTY_PRINT) ?></pre>
         <?php endif; ?>
     </div>
 
-    <pre><?= $trace ?></pre>
+    <pre><?= htmlspecialchars($trace, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?></pre>
 </div>

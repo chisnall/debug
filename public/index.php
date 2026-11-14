@@ -23,5 +23,9 @@ define('BASE_PATH', dirname(__DIR__));
 
 require_once BASE_PATH . '/vendor/autoload.php';
 
+// TODO: remove
+//squiz("test");
+//trace(7);
+
 // Boot application
 (new Application())->run();

@@ -49,19 +49,15 @@ class EntriesController extends Controller
     {
         $entryId = $this->data['entryId'];
 
-        $entriesPath = getConfig('directories/entries');
+        $entry = LogEntries::entry($entryId);
 
-        $entryFile = "$entriesPath/$entryId.log";
-
-        $entry = LogEntries::entryById($entryId);
-
+        $entryPath = $entry['path'];
         $xdebug = $entry['xdebug'] ?? null;
 
-        deleteFile($entryFile);
+        deleteFile($entryPath);
 
         if ($xdebug) {
             deleteFile($xdebug);
-            deleteFile("$xdebug.meta");
         }
 
         return json_encode([

@@ -28,27 +28,6 @@ class SiteController extends Controller
         return self::render($this->view);
     }
 
-    public function test(Request $request): string
-    {
-        // An example of passing an associative array to the view
-        $params = [
-            "var1" => "string here",
-            "var2" => 123456,
-        ];
-
-        // Check for post
-        if ($request->isPost()) {
-            // Get model class name
-            $modelClassName = $request->getBody()['modelClassName'];
-
-            // Handle post request
-            $$modelClassName->handlePost($request);
-        }
-
-        // Render view
-        return self::render('test', $params);
-    }
-
     public function flashTest(): void
     {
         // Set flash message
@@ -84,5 +63,29 @@ class SiteController extends Controller
         //$sql = "SELECT * FROM users2 WHERE id = 1";
         //$statement = db()->prepare($sql);
         //$statement->execute();
+    }
+
+    public function testGet(Request $request): string
+    {
+        // An example of passing an associative array to the view
+        $params = [
+            "var1" => "string here",
+            "var2" => 123456,
+        ];
+
+        // Render view
+        return self::render('test', $params);
+    }
+
+    public function testPost(Request $request): void
+    {
+        // Get input value
+        $inputValue = $request->getBody()['input'];
+
+        // Set flash message
+        session()->setFlash('success', "Value entered was: $inputValue");
+
+        // Redirect to test page
+        response()->redirect('/test');
     }
 }

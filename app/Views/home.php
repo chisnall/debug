@@ -131,6 +131,10 @@ $logEntries = $params['logEntries'];
                 </div>
             <?php endif; ?>
 
+            <div class="line">
+                <pre><?= $logEntry['request']['method'] . ' ' . $logEntry['request']['path'] ?></pre>
+            </div>
+
             <?php if($logEntry['xdebug']): ?>
                 <div class="line">
                     <pre>Xdebug trace</pre>
@@ -155,7 +159,7 @@ $logEntries = $params['logEntries'];
                 </div>
 
                 <div class="vardump">
-                    <?php echo base64_decode($logEntry['entry']); ?>
+                    <?php echo base64_decode($logEntry['dump']); ?>
                 </div>
             <?php endif; ?>
 

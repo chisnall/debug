@@ -61,6 +61,11 @@ if (! function_exists('squiz')) {
         $user = $fileArray[3];
         $project = $fileArray[4];
 
+        // For home Docker container
+        if (gethostname() === 'debug') {
+            $user = 'app';
+        }
+
         // Determine log directory
         $logDirectory = "/rlg/web/log/$user/debug/entries";
 
@@ -90,9 +95,22 @@ if (! function_exists('squiz')) {
             $htmlDump .= ob_get_clean();
         }
 
+        // Get request data
+        $requestPath = $_SERVER['REQUEST_URI'] ?? '';
+        $requestMethod = $_SERVER['REQUEST_METHOD'] ?? '';
+        $requestContentType = $_SERVER['CONTENT_TYPE'] ?? '';
+        $requestGet = $_GET ?? [];
+        $requestPost = $_POST ?? [];
+
+        // Detect Ajax POST request
+        if ($requestMethod === 'POST' && stripos($requestContentType, 'application/json') === 0) {
+            $requestPost = json_decode(file_get_contents('php://input'), true);
+        }
+
         // Set output
         $output = [
             'id' => $id,
+            'path' => $logFile,
             'datetime' => date('Y-m-d H:i:s'),
             'file' => $file,
             'line' => $line,
@@ -100,7 +118,13 @@ if (! function_exists('squiz')) {
             'xdebug' => $xdebug,
             'terminated' => $terminated,
             'trace' => $traceString,
-            'entry' => base64_encode($htmlDump),
+            'dump' => base64_encode($htmlDump),
+            'request' => [
+                'path' => $requestPath,
+                'method' => $requestMethod,
+                'get' => $requestGet,
+                'post' => $requestPost,
+            ],
         ];
 
         // Output file
@@ -133,6 +157,7 @@ if (! function_exists('trace')) {
     {
         // Check if trace is enabled in the cookie
         $traceEnabled = isset($_COOKIE['XDEBUG_TRACE']) && $_COOKIE['XDEBUG_TRACE'] === '1';
+
         if (! $traceEnabled) {
             return;
         }
@@ -142,14 +167,6 @@ if (! function_exists('trace')) {
             $level = 1;
         }
 
-        // Determine meta
-        $meta = [
-            'path' => $_SERVER['REQUEST_URI'],
-            'method' => $_SERVER['REQUEST_METHOD'],
-            'get' => $_GET,
-            'post' => $_POST,
-        ];
-
         // Get file calling this
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
         $file = $backtrace[0]['file'] ?? 'unknown';
@@ -157,6 +174,11 @@ if (! function_exists('trace')) {
         // Determine user
         $fileArray = explode('/', trim($file, '/'));
         $user = $fileArray[3];
+
+        // For home Docker container
+        if (gethostname() === 'debug') {
+            $user = 'app';
+        }
 
         // Determine trace directory
         $traceDirectory = "/rlg/web/log/$user/debug/xdebug";
@@ -171,25 +193,26 @@ if (! function_exists('trace')) {
         $id = (int) (microtime(true) * 1_000_000);
         $traceFile = "trace.$id";
         $tracePath = "$traceDirectory/$traceFile.xt";
-        $metaPath = "$tracePath.meta";
+
+        // Determine Xdebug version
+        // The ini setting are different between version 2 and 3
+        $xdebugVersion = phpversion('xdebug');
 
         // Set xdebug ini settings
-        ini_set('xdebug.collect_params', '0');
-        ini_set('xdebug.collect_return', '0');
-        ini_set('xdebug.collect_assignments', '0');
-        ini_set('xdebug.show_mem_delta', '0');
-        ini_set('xdebug.trace_format', '0');   // compact format
-        ini_set('xdebug.trace_output_dir', $traceDirectory);
-        ini_set('xdebug.trace_output_name', $traceFile);
-
-        // Run trace
-        xdebug_start_trace();
-
-        // Create a squiz entry with the trace file path
-        squiz("xdebug:$tracePath");
-
-        // Write meta
-        file_put_contents($metaPath, serialize($meta));
+        if (version_compare($xdebugVersion, '3.0.0', '>=')) {
+            // Version 3
+            ini_set('xdebug.output_dir', $traceDirectory);
+            ini_set('xdebug.trace_output_name', $traceFile);
+        } else {
+            // Version 2
+            ini_set('xdebug.collect_params', '0');
+            ini_set('xdebug.collect_return', '0');
+            ini_set('xdebug.collect_assignments', '0');
+            ini_set('xdebug.show_mem_delta', '0');
+            ini_set('xdebug.trace_format', '0');   // compact format
+            ini_set('xdebug.trace_output_dir', $traceDirectory);
+            ini_set('xdebug.trace_output_name', $traceFile);
+        }
 
         // Determine the grep string exclude based on the trace level
         $traceGrepString = str_repeat(' ', $level * 2) . '     -> ';
@@ -260,9 +283,19 @@ if (! function_exists('trace')) {
         // Exclude string for grep
         $excludeString = implode('\|', $exclude);
 
-        // Reduce size of trace file by removing various lines
+        // Run trace
+        xdebug_start_trace();
+
+        // Run on shutdown
         register_shutdown_function(function () use ($excludeString, $tracePath) {
+            // Stop trace
+            xdebug_stop_trace();
+
+            // Reduce size of trace file by removing various lines
             shell_exec("/usr/bin/grep -v '$excludeString' $tracePath | /usr/bin/sed 's|/rlg/web/app/lchisnall/integro-lchisnall||g' > $tracePath.tmp && /usr/bin/mv $tracePath.tmp $tracePath");
+
+            // Create a squiz entry with the trace file path
+            squiz("xdebug:$tracePath");
         });
     }
 }

@@ -15,8 +15,6 @@ class XdebugController extends Controller
     {
         parent::__construct();
 
-        $this->page['layout'] = 'xdebug';
-
         // Register middleware
         $this->registerMiddleware(new AuthMiddleware());
     }
@@ -31,23 +29,22 @@ class XdebugController extends Controller
             response()->redirect('/');
         }
 
-        $entry = LogEntries::entryById($id);
+        $entry = LogEntries::entry($id);
 
         if (!$entry) {
             response()->redirect('/');
         }
 
         $xdebug = $entry['xdebug'];
+        $request = $entry['request'];
 
         $trace = file_get_contents($xdebug);
-
-        $meta = unserialize(file_get_contents("$xdebug.meta"));
 
         $params = [
             'id' => $id,
             'xdebug' => $xdebug,
-            'meta' => $meta,
             'trace' => $trace,
+            'request' => $request,
         ];
 
         // Render view

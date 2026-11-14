@@ -13,7 +13,7 @@ declare(strict_types=1);
     <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">-->
     <link rel="icon" href="/images/icon-light.png" sizes="192x192">
     <link href="/css/style.css" rel="stylesheet">
-    <script src="/js/xdebug.js"></script>
+    <script src="/js/home.js"></script>
     <title>{{title}}</title>
 </head>
 <body class="body-text">

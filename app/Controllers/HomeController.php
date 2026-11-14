@@ -33,6 +33,9 @@ class HomeController extends Controller
         //    // ...
         //}
 
+        // Set layout
+        $this->setLayout('home');
+
         // Set view params
         $params = [
             'logIds' => LogEntries::ids($this->logEntries),

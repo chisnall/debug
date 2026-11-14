@@ -16,11 +16,9 @@ class LogEntries
         $files = array_diff(scandir($entriesDirectory), ['.', '..']);
 
         foreach ($files as $file) {
-            // Read file contents
-            $contents = file_get_contents("$entriesDirectory/$file");
+            $id = pathinfo($file, PATHINFO_FILENAME);
 
-            // Unserialize file contents
-            $entry = unserialize($contents);
+            $entry = self::entry($id);
 
             // Check if specific IDs have been provided to this method
             if (!$ids || ($ids && in_array($entry['id'], $ids))) {
@@ -32,7 +30,7 @@ class LogEntries
         return $logEntries;
     }
 
-    public static function entryById($id)
+    public static function entry($id)
     {
         // Get entries path
         $entriesDirectory = getConfig('directories/entries');

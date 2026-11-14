@@ -21,7 +21,8 @@ router()->get('/api/ids', [EntriesController::class, 'logIds']);
 router()->get('/xdebug', [XdebugController::class, 'view']);
 
 // Test page
-router()->get('/test', [SiteController::class, 'test']);
+router()->get('/test', [SiteController::class, 'testGet']);
+router()->post('/test', [SiteController::class, 'testPost']);
 
 // Flash test
 router()->get('/flash-test', [SiteController::class, 'flashTest']);
