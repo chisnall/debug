@@ -53,6 +53,10 @@ if (! function_exists('squiz')) {
             $line = $backtrace[0]['line'] ?? 'unknown';
         }
 
+        // Get class and function calling this
+        $class = $backtraceEntry = $backtrace[1]['class'] ?? null;
+        $function = $backtraceEntry = $backtrace[1]['function'] ?? null;
+
         // Get trace string by throwing an exception
         $traceString = (new \Exception())->getTraceAsString();
 
@@ -114,6 +118,8 @@ if (! function_exists('squiz')) {
             'datetime' => date('Y-m-d H:i:s'),
             'file' => $file,
             'line' => $line,
+            'class' => $class,
+            'function' => $function,
             'comment' => $comment,
             'xdebug' => $xdebug,
             'terminated' => $terminated,
@@ -153,7 +159,7 @@ if (! function_exists('trace')) {
     /**
      * @return void
      */
-    function trace(int $level = 1): void
+    function trace(int $level = 20): void
     {
         // Check if trace is enabled in the cookie
         $traceEnabled = isset($_COOKIE['XDEBUG_TRACE']) && $_COOKIE['XDEBUG_TRACE'] === '1';
@@ -225,6 +231,7 @@ if (! function_exists('trace')) {
             '/rlg/web/app/lchisnall/debug-lchisnall',
             'abs()',
             'array_fill()',
+            'array_key_exists()',
             'array_keys()',
             'array_search()',
             'assert_options()',
@@ -232,6 +239,7 @@ if (! function_exists('trace')) {
             'basename()',
             'ceil()',
             'chr()',
+            'class_exists()',
             'constant()',
             'date()',
             'date_default_timezone_set()',
@@ -241,12 +249,17 @@ if (! function_exists('trace')) {
             'error_reporting()',
             'explode()',
             'file_exists()',
+            'get_include_path()',
+            'getmypid()',
             'gmdate()',
             'gzcompress()',
             'gzuncompress()',
             'header()',
+            'htmlentities()',
+            'htmlspecialchars()',
             'implode()',
             'in_array()',
+            'ini_get()',
             'ini_set()',
             'is_array()',
             'is_dir()',
@@ -258,11 +271,15 @@ if (! function_exists('trace')) {
             'ltrim()',
             'mb_internal_encoding()',
             'md5()',
+            'memory_get_peak_usage()',
             'number_format()',
+            'parse_ini_file()',
             'preg_match()',
             'preg_match_all()',
             'preg_quote()',
             'preg_replace()',
+            'rand()',
+            'removeNastyChars()',
             'reset()',
             'realpath()',
             'rtrim()',
@@ -272,8 +289,10 @@ if (! function_exists('trace')) {
             'str_replace()',
             'stripos()',
             'strpos()',
+            'strrpos()',
             'strtolower()',
             'strtoupper()',
+            'strtr()',
             'substr()',
             'time()',
             'trim()',
