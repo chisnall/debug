@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     html += '</div></div>';
                 }
 
-                // TODO
                 html += `<div class="line"><pre>${entry.request.method} ${entry.request.path}</pre></div>`;
 
                 if (entry.xdebug) {
@@ -46,6 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     html += `<div class="line"><pre>Xdebug trace</pre></div>`;
                     html += `<div class="line"><pre><a class="xdebug" href="/xdebug?id=${entry.id}" target="_blank">${xdebugBasename}</a></pre></div>`;
                 } else {
+                    if (entry.class && entry.function) {
+                        html += `<div class="line"><pre>${entry.class} → ${entry.function}()</pre></div>`;
+                    }
+
                     html += `<div class="line"><pre>${entry.file}:${entry.line}</pre></div>`;
                     if (entry.comment) html += `<div class="line"><pre class="italic">${entry.comment}</pre></div>`;
                     html += `<div id="trace-${entry.id}" class="trace"><pre>` + entry.trace + '</pre></div>';
