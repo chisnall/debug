@@ -78,6 +78,8 @@ $logEntries = $params['logEntries'];
     <?php endif; ?>
 
     <?php foreach ($logEntries as $logEntry): ?>
+<!--        --><?php //dump($logEntry) ?>
+
         <div id="entry-<?= $logEntry['id'] ?>" class="entry">
             <?php if($logEntry['terminated']): ?>
                 <div class="terminated">
@@ -144,6 +146,12 @@ $logEntries = $params['logEntries'];
                     <pre><a class="xdebug" href="/xdebug?id=<?= $logEntry['id'] ?>" target="_blank"><?= basename($logEntry['xdebug']) ?></a></pre>
                 </div>
             <?php else: ?>
+                <?php if ($logEntry['class'] && $logEntry['function']): ?>
+                    <div class="line">
+                        <pre><?= $logEntry['class'] . ' → ' . $logEntry['function'] . '()' ?></pre>
+                    </div>
+                <?php endif; ?>
+
                 <div class="line">
                     <pre><?= $logEntry['file'] . ':' . $logEntry['line'] ?></pre>
                 </div>
