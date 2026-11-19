@@ -10,6 +10,7 @@ button.auto { display: flex; align-items: center; justify-content: center; paddi
 button:focus { outline: none; }
 div.datetime { display: flex; align-items: center; }
 div.line { padding: 8px 0; }
+div.request { padding: 8px 0; display: none; }
 div.trace { padding: 8px 0; display: none; }
 div.terminated { display: flex; justify-content: space-between; padding: 8px; }
 div.spacer { height: 10px; }
@@ -28,6 +29,8 @@ div.icons div.icon { display: flex; padding: 0; border: 1px solid transparent; b
 div.icons div.icon:hover { cursor: pointer; }
 div.notify { display: flex; align-items: center; color: transparent; font-size: 30px; }
 div.notify svg { height: 100%; width: auto; }
+div.request-icon { margin-top: 0; }
+div.request-icon svg { display: block; margin-left: 10px; height: 16px; width: 16px; cursor: pointer; }
 div.trace-icon { margin-top: 0; }
 div.trace-icon svg { display: block; margin-left: 10px; height: 20px; width: 20px; cursor: pointer; }
 div.delete-icon { margin-top: -1px; }
